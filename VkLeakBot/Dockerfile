@@ -1,4 +1,4 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 
 # Копируем csproj и восстанавливаем зависимости
@@ -9,11 +9,10 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-# Сборка финального образаf
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+# Сборка финального образа
+FROM mcr.microsoft.com/dotnet/aspnet:10.0
 WORKDIR /app
 COPY --from=build /app/out .
 EXPOSE 80
-EXPOSE 443
 
 ENTRYPOINT ["dotnet", "VkLeakBot.dll"]
