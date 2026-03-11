@@ -1,6 +1,6 @@
 public class VkService
 {
-    private readonly string _token = "vk1.a.ТВОЙ_ТОКЕН_СООБЩЕСТВА_СЮДА_ПОЛНОСТЬЮ";
+    private readonly string _token = "vk1.a.lCH5o_lW7LJEsHLT95gPZqx4hgHiPQD9luP5bz0AUGwRvqLFPdewo8yEDLd3-y65VBQ52FJ4q3M8lrkL60oMFK6iuV7TqzX-e8hpo7wcvTV3I__0TddR7rUbsp29oend7FJNfO_TnR0ySVL_iiIsg4K3lnklxcJdZxe424AgbL2eirUhsIT2e1nPMRusJbjYsjJpIonbGMX_-rvoaKea2Q";
     private readonly HttpClient _http = new();
 
     private string GetKeyboardJson()
