@@ -6,7 +6,7 @@ builder.Services.AddSingleton<VkService>();
 var app = builder.Build();
 
 // === ТВОИ НАСТРОЙКИ (замени своими!) ===
-const string AccessToken = "2Hcl1-C05wvk1.a.gnweqCC6CEOGB9m9BfQqCuSwQcn2hUb7fQBeUDaFA8mO1y3sqhPUJpYpJ1x-bNZtSN4Vcy0wW6eOQ0KmNIWEJqaA-JZes_RirZ2hJ9DM9g60O_jcRqSHyogMP4e8V9A2a2Cmo4R_3En_GAeh8ezoNbKoKLC8dLQRMd52rI5mDWU9dZScMC5uQdz4myu8xu1Lc2h5SdMvHaRQ"; 
+
 const string ConfirmationSecret = "24649f82";
 const string CallbackPath = "/callback";
 
