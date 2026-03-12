@@ -5,12 +5,12 @@ builder.Services.AddSingleton<VkService>();
 
 var app = builder.Build();
 
-// === ТВОИ НАСТРОЙКИ (замени своими!) ===
+
 
 const string ConfirmationSecret = "24649f82";
 const string CallbackPath = "/callback";
 
-// === Callback от VK ===
+=
 app.MapPost(CallbackPath, async (HttpRequest req) =>
 {
     using var reader = new StreamReader(req.Body);
@@ -39,7 +39,6 @@ app.MapPost(CallbackPath, async (HttpRequest req) =>
 
 app.Run();
 
-// === ОБРАБОТКА КНОПОК И СООБЩЕНИЙ ===
 async Task HandleUserMessage(long userId, string text, string? payload, VkService vk)
 {
     string response = "👋 Привет! Я бот защиты от протечек.\nВыбери действие ниже:";
